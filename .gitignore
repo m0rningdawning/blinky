@@ -1,0 +1,37 @@
+# STM32CubeIDE project files
+*.launch
+*.uvoptx
+*.uvprojx
+*.cproject
+*.project
+*.settings/
+*.load
+*.db
+
+# Build files
+build/
+Debug/
+Release/
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.o
+*.d
+
+# CubeMX generated
+*.ioc
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE backup files
+*~
+*.swp
+
+# Makefiles and temporary folders
+Makefile
+mxconfig/
+Drivers/.mxProject
