@@ -15,6 +15,9 @@
   *
   ******************************************************************************
   */
+
+//#define HAL
+#ifdef HAL
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -428,3 +431,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+#endif
