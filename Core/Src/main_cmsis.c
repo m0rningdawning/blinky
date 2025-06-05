@@ -9,13 +9,11 @@
 #include "stm32f7xx.h"
 
 // -----------------------------------------------------------------------------
-// Simple delay loop (not precise, but ok for LED blinking)
-//   CPU runs at 216 MHz (default Overdrive).
-//   Roughly 1 ms =~ 12000 iterations of inner loop.
+// Simple delay loop (not precise, but ok for LED blinking) (Values guessed XD)
 // -----------------------------------------------------------------------------
 static void delay_ms(volatile uint32_t ms)
 {
-    const uint32_t loops_per_ms = 12000U;
+    const uint32_t loops_per_ms = 1090U;
     for (; ms > 0; --ms)
     {
         for (uint32_t i = 0; i < loops_per_ms; i++)
@@ -95,18 +93,18 @@ int main(void)
     while (1)
     {
         LED_Write(1, 0, 0);
-        delay_ms(500);
+        delay_ms(1000);
 
         LED_Write(0, 1, 0);
-        delay_ms(500);
+        delay_ms(1000);
 
         LED_Write(0, 0, 1);
-        delay_ms(500);
+        delay_ms(1000);
 
         LED_Write(1, 1, 1);
-        delay_ms(500);
+        delay_ms(1000);
 
         LED_Write(0, 0, 0);
-        delay_ms(500);
+        delay_ms(1000);
     }
 }
